@@ -1,0 +1,97 @@
+{
+  "private": true,
+  "type": "module",
+  "name": "miniature-archive",
+  "version": "1.0.0",
+  "main": "electron/main.js",
+  "author": "Your Name",
+  "description": "Miniature Archive Manager",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "electron-dev": "concurrently \"cross-env BROWSER=none yarn dev\" \"wait-on http://localhost:5173 && cross-env NODE_ENV=development electron .\"",
+    "electron-build": "yarn build && electron-builder",
+    "electron-build:mac": "yarn build && electron-builder --mac",
+    "electron-build:win": "yarn build && electron-builder --win",
+    "electron-build:linux": "yarn build && electron-builder --linux"
+  },
+  "build": {
+    "appId": "com.miniature.archive",
+    "productName": "Miniature Archive",
+    "directories": {
+      "output": "release",
+      "buildResources": "assets"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "mac": {
+       "identity": "Apple Development: denn42x@yandex.ru (287745P6RA)",
+      "category": "public.app-category.graphics-design",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.icns"
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "4.2.4",
+    "clsx": "2.1.1",
+    "concurrently": "9.2.1",
+    "cross-env": "10.1.0",
+    "lucide-react": "1.8.0",
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
+    "tailwind-merge": "3.5.0",
+    "wait-on": "9.0.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.4",
+    "@types/node": "24.12.2",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.1",
+    "autoprefixer": "10.5.0",
+    "electron": "41.2.2",
+    "electron-builder": "26.8.1",
+    "eslint": "9.39.4",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "eslint-plugin-react-refresh": "0.5.2",
+    "globals": "17.5.0",
+    "postcss": "8.5.10",
+    "tailwindcss": "4.2.4",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "8.58.2",
+    "vite": "8.0.9"
+  }
+}
