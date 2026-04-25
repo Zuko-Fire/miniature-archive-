@@ -1,23 +1,30 @@
-import { View, Text, Pressable } from '@gluestack-ui/themed';
-import { cn } from '@/shared/lib/cn';
+import { Badge, Flex } from '@chakra-ui/react';
 
-export function TagFilter({ tags, selected, onToggle }: { tags: string[]; selected: string[]; onToggle: (tag: string) => void }) {
+interface TagFilterProps {
+  tags: string[];
+  selected: string[];
+  onToggle: (tag: string) => void;
+}
+
+export function TagFilter({ tags, selected, onToggle }: TagFilterProps) {
   return (
-    <View className="flex flex-row flex-wrap gap-2">
+    <Flex wrap="wrap" gap={2}>
       {tags.map(tag => (
-        <Pressable
+        <Badge
           key={tag}
-          onPress={() => onToggle(tag)}
-          className={cn(
-            "px-3 py-1.5 rounded-full transition-colors",
-            selected.includes(tag) ? "bg-accentPurple" : "bg-dark800 hover:bg-dark700"
-          )}
+          cursor="pointer"
+          variant={selected.includes(tag) ? 'subtle' : 'outline'}
+          _hover={{ 
+            bg: selected.includes(tag) ? 'accent.purpleHover' : 'whiteAlpha.100',
+            transform: 'scale(1.02)',
+            transition: 'all 0.2s'
+          }}
+          onClick={() => onToggle(tag)}
+          fontSize="xs"
         >
-          <Text className={cn("text-xs font-medium", selected.includes(tag) ? "text-white" : "text-gray-400")}>
-            {tag}
-          </Text>
-        </Pressable>
+          {tag}
+        </Badge>
       ))}
-    </View>
+    </Flex>
   );
 }

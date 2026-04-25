@@ -1,14 +1,14 @@
-import { GluestackUIProvider } from '@gluestack-ui/themed';
-import { gluestackConfig } from '@/shared/config/gluestack.config';
-import { ArchivePage } from '@/pages/archive/ui/ArchivePage';
+import { ChakraProvider } from "@chakra-ui/react"
 
+import { ArchivePage } from "@/pages/archive/ui/ArchivePage"
+import { system } from "@/shared/config/chakra-theme"
 
 function App() {
   return (
-    <GluestackUIProvider config={gluestackConfig} colorMode="dark">
+    <ChakraProvider value={system}>
       <ArchivePage />
-    </GluestackUIProvider>
-  );
+    </ChakraProvider>
+  )
 }
 
-export default App;
+export default App

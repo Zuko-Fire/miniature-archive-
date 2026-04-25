@@ -65,13 +65,15 @@
     }
   },
   "dependencies": {
-    "@gluestack-style/react": "1.0.57",
-    "@gluestack-ui/themed": "1.1.73",
+    "@chakra-ui/react": "^3.35.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "@tailwindcss/vite": "4.2.4",
     "@tanstack/react-table": "8.21.3",
     "clsx": "2.1.1",
     "concurrently": "9.2.1",
     "cross-env": "10.1.0",
+    "framer-motion": "^12.38.0",
     "lucide-react": "1.11.0",
     "react": "19.2.5",
     "react-dom": "19.2.5",

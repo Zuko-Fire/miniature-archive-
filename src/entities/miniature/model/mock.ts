@@ -25,4 +25,16 @@ export const MOCK_MINIATURES: Miniature[] = [
     dateAdded: '16.01.2026',
     dateEdited: '16.01.2026',
   },
+    {
+    id: '3',
+    name: 'Dark Souls - Knight Artorias',
+    imagePath: 'https://placehold.co/150x200/262626/FFF?text=Artorias',
+    tags: ['#DarkSouls', '#Арториас', '#Рыцари', '#Фигурки'],
+    fileSize: '2.1 ГБ',
+    compressedSize: '890 МБ',
+    cost: '35 ₽',
+    resinConsumption: '180 г',
+    dateAdded: '18.01.2026',
+    dateEdited: '19.01.2026',
+  },
 ];
