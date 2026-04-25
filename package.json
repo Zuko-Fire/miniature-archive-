@@ -29,7 +29,7 @@
       "package.json"
     ],
     "mac": {
-       "identity": "Apple Development: denn42x@yandex.ru (287745P6RA)",
+      "identity": "Apple Development: denn42x@yandex.ru (287745P6RA)",
       "category": "public.app-category.graphics-design",
       "target": [
         {
@@ -65,11 +65,14 @@
     }
   },
   "dependencies": {
+    "@gluestack-style/react": "1.0.57",
+    "@gluestack-ui/themed": "1.1.73",
     "@tailwindcss/vite": "4.2.4",
+    "@tanstack/react-table": "8.21.3",
     "clsx": "2.1.1",
     "concurrently": "9.2.1",
     "cross-env": "10.1.0",
-    "lucide-react": "1.8.0",
+    "lucide-react": "1.11.0",
     "react": "19.2.5",
     "react-dom": "19.2.5",
     "tailwind-merge": "3.5.0",
@@ -77,7 +80,7 @@
   },
   "devDependencies": {
     "@eslint/js": "9.39.4",
-    "@types/node": "24.12.2",
+    "@types/node": "25.6.0",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "6.0.1",

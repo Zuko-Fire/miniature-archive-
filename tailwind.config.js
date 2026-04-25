@@ -1,20 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        dark: {
-          900: '#1a1a1a', // Основной фон
-          800: '#262626', // Фон карточек/строк
-          700: '#404040', // Границы
-        },
-        accent: {
-          purple: '#6d28d9', // Цвет тегов как на скриншоте
-        }
+        dark900: '#1a1a1a',
+        dark800: '#262626',
+        dark700: '#404040',
+        accentPurple: '#6d28d9',
+        accentPurpleHover: '#5b21b6',
       }
     },
   },
